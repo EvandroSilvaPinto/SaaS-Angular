@@ -1,14 +1,27 @@
-<div class="p-16">
+<mat-sidenav-container class="example-container" autosize>
+    <mat-sidenav #drawer class="example-sidenav" mode="side" class="p-16" style="width: 80%">
+        <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <mat-nav-list>
+            <mat-list-item>
+                <a href="#">Item 1</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a href="#">Item 2</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a href="#">Item 3</a>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
 
-  <div fxFlex fxLayout="column" fxLayoutAlign="start start">
-
-    <div fxFlex fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="8px">
-      <span>Teste fxLayout!</span>
-
-      <button mat-raised-button>Aperta aqui!</button>
+    <div fxFlex fxLayout="column" fxLayoutAlign="start">
+        <mat-toolbar color="gray">
+            <button mat-icon-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
     </div>
 
-    <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-  </div>
-
-</div>
+</mat-sidenav-container>
